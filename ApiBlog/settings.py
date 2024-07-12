@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/5.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
-
+import os.path
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-2of_56&vcse-jkmo3h8htcu(fm(4o#05luxjk4gg!lv!2x0k6a
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["127.0.0.1"]
+ALLOWED_HOSTS = ["46.101.107.98", "localhost"]
 
 
 # Application definition
@@ -79,10 +79,10 @@ WSGI_APPLICATION = 'ApiBlog.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'HOST': 'bjxa8xsl1e1lck7f54jx-mysql.services.clever-cloud.com',
-        'NAME': 'bjxa8xsl1e1lck7f54jx',
-        'USER': 'u9zegdfseufizi2q',
-        'PASSWORD': 'SgfGpOOjCP0nZhyq9Ipt',
+        'HOST': 'localhost',
+        'NAME': 'Blog',
+        'USER': 'jp',
+        'PASSWORD': 'Jp_16061987',
         'PORT': '3306',
         'OPTIONS': {
             'init_command': "SET sql_mode=STRICT_TRANS_TABLES"}
@@ -125,6 +125,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'static/'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
